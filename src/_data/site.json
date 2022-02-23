@@ -1,0 +1,18 @@
+{
+  "en-CA": {
+    "name": "Future of Work: Equitable Digital Systems",
+    "description": "The Future of Work: Equitable Digital Systems project is an initiative at the Inclusive Design Research Centre, OCAD U examining the accessibility of the digital tools and systems we rely upon for work.",
+    "url": "https://eds.inclusivedesign.ca",
+    "authorWebsite": "https://idrc.ocadu.ca",
+    "authorEmail": "idrc@ocadu.ca",
+    "authorName": "Inclusive Design Research Centre"
+  },
+  "fr-CA": {
+    "name": "Systeme Equitable Digitale",
+    "description": "Le projet Future of Work: Equitable Digital Systems est une initiative du Centre de Recherche pour une Conception Inclusive, OCAD U, qui examine l'accessibilité des outils et systèmes numériques sur lesquels nous comptons pour le travail.",
+    "url": "https://eds.inclusivedesign.ca",
+    "authorWebsite": "https://idrc.ocadu.ca",
+    "authorEmail": "idrc@ocadu.ca",
+    "authorName": "Centre de Recherche pour une Conception Inclusive"
+  }
+}
