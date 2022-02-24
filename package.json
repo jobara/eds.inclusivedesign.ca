@@ -1,6 +1,6 @@
 {
     "name": "eds-site",
-    "version": "0.1.0-dev.0",
+    "version": "1.0.0",
     "description": "Website for the Equitable Digital Systems (EDS) project",
     "scripts": {
         "build": "npm-run-all -l clean build:*",
