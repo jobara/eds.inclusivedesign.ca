@@ -6,6 +6,7 @@ on:
 
 jobs:
   release-please:
+    if: github.repository == 'inclusive-design/eds.inclusivedesign.ca'
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v3
