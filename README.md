@@ -1,5 +1,7 @@
 # Future of Work: Equitable Digital Systems website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7e15b6e3-eade-491e-8410-ccbdfa06bf07/deploy-status)](https://app.netlify.com/sites/eds-site/deploys)
+
 The codebase for the [Future of Work: Equitable Digital Systems](eds.inclusivedesign.ca) website.
 
 ## Running
@@ -79,11 +81,22 @@ following changes need to be made:
    Markdown files are processed with the Liquid template language. If for some reason one decides to modify this to use
    Nunjucks or another template language, the permalink syntax in all post archive pages will need to be modified to use
    the chosen template language.)
+5. Create a localized version of the 404 page, following the example of [`src/404.fr-CA.md`](src/404.fr-CA.md).
+   (Note: as per Eleventy's [default configuration](https://www.11ty.dev/docs/config/#default-template-engine-for-markdown-files),
+   Markdown files are processed with the Liquid template language. If for some reason one decides to modify this to use
+   Nunjucks or another template language, the permalink syntax in all post archive pages will need to be modified to use
+   the chosen template language.)
+6. To ensure that the 404 page is displayed in the appropriate language, verify that a redirect block has been added to
+   the [netlify.toml](netlify.toml) file for each language following the examples. This feature is described in
+   Netlify's [redirects documentation](https://docs.netlify.com/routing/redirects/redirect-options/#custom-404-page-handling).
 
-For more information about how Netlify CMS works with internationalized content, see the [internationalization support documentation](https://www.netlifycms.org/docs/beta-features/#i18n-support).
+For more information about how Netlify CMS works with internationalized content, see the
+[internationalization support documentation](https://www.netlifycms.org/docs/beta-features/#i18n-support).
 
 ## License
 
-Code is available under the [New BSD License](https://raw.githubusercontent.com/inclusive-design/eds.inclusivedesign.ca/master/LICENSE.md).
+Code is available under the
+[New BSD License](https://raw.githubusercontent.com/inclusive-design/eds.inclusivedesign.ca/master/LICENSE.md).
 
-Content is available under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/).
+Content is available under the
+[Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/).
