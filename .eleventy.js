@@ -18,6 +18,7 @@ const fluidPlugin = require("eleventy-plugin-fluid");
 const navigationPlugin = require("@11ty/eleventy-navigation");
 const rssPlugin = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlightPlugin = require("@11ty/eleventy-plugin-syntaxhighlight");
+const i18n = require("eleventy-plugin-i18n-gettext");
 
 // Import transforms
 const htmlMinTransform = require("./src/transforms/html-min-transform.js");
@@ -61,6 +62,9 @@ module.exports = function (config) {
     config.addPlugin(navigationPlugin);
     config.addPlugin(rssPlugin);
     config.addPlugin(syntaxHighlightPlugin);
+    config.addPlugin(i18n, {
+        localesDirectory: "src/locales"
+    });
 
     // 404
     config.setBrowserSyncConfig({
