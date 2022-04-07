@@ -1,15 +1,15 @@
             <nav class="nav" id="menu" aria-label="menu">
                 <ul>
-                    {% set navItems = collections.all | eleventyNavigation(lang) %}
+                    {% set navItems = collections.all | eleventyNavigation(locale) %}
                     {% for item in navItems %}
                     <li>
                         <a href="{{ item.url | url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
                     </li>
                     {% endfor %}
                     {% for item in collections.all %}
-                        {% if item.data.lang !== lang and item.data.translationKey == ('index' if translationKey == 404 else translationKey) %}
-                            <li lang="{{ item.data.lang }}">
-                                <a href="{{ item.url }}">{{ config.languages[item.data.lang].name }}</a>
+                        {% if item.data.locale !== locale and item.data.translationKey == ('index' if translationKey == 404 else translationKey) %}
+                            <li lang="{{ item.data.locale }}">
+                                <a href="{{ item.url }}">{{ config.languages[item.data.locale].name }}</a>
                             </li>
                         {% endif %}
                     {% endfor %}

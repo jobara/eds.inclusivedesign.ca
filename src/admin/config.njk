@@ -16,19 +16,6 @@ i18n:
   locales: [{% for code, language in config.languages %}{{code}}{% if loop.last !== true %}, {% endif %}{% endfor %}]
   default_locale: {{ config.defaultLanguage }}
 collections:
-  - label: "Posts"
-    label_singular: "Post"
-    name: "post"
-    i18n: true
-    folder: "src/collections/posts/"
-    extension: "md"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string", i18n: true }
-      - { label: "Excerpt", name: "excerpt", widget: "string", required: false, i18n: true }
-      - { label: "Author", name: "author", widget: "string", i18n: true }
-      - { label: "Publication Date", name: "date", widget: "datetime", i18n: duplicate }
-      - { label: "Body", name: "body", widget: "markdown", i18n: true }
   - label: "Pages"
     label_singular: "Page"
     name: "page"
@@ -51,7 +38,6 @@ collections:
         file: "src/_data/config.json"
         fields:
           - { label: URL, name: url, widget: string }
-          - { label: "Maximum Posts in RSS Feed", name: maxPostsInFeed, widget: number, min: 1, i18n: false }
   - label: "Site Data"
     name: "data"
     i18n:
@@ -67,4 +53,4 @@ collections:
           - { label: "Author Name", name: authorName, widget: string, i18n: true }
           - { label: "Author Email", name: authorEmail, widget: string, i18n: duplicate }
           - { label: "Author Website", name: authorWebsite, widget: string, i18n: duplicate }
-          
+

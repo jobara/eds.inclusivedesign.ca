@@ -16,7 +16,6 @@ const fs = require("fs");
 
 const fluidPlugin = require("eleventy-plugin-fluid");
 const navigationPlugin = require("@11ty/eleventy-navigation");
-const rssPlugin = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlightPlugin = require("@11ty/eleventy-plugin-syntaxhighlight");
 const i18n = require("eleventy-plugin-i18n-gettext");
 
@@ -38,29 +37,10 @@ module.exports = function (config) {
     config.addPassthroughCopy({"src/admin/config.yml": "admin/config.yml"});
     config.addPassthroughCopy({"src/assets/icons": "/"});
     config.addPassthroughCopy({"src/assets/images": "assets/images"});
-    config.addPassthroughCopy({"src/posts/images": "posts/images"});
-
-    const now = new Date();
-
-    // Custom collections
-    const livePosts = post => post.date <= now && !post.data.draft;
-    Object.keys(siteConfig.languages).forEach(lang => {
-        config.addCollection(`posts_${lang}`, collection => {
-            return collection.getFilteredByGlob(`./src/collections/posts/${lang}/*.md`).filter(livePosts);
-        });
-
-        // The following collection is used to create a collection of posts for the RSS feed.
-        config.addCollection(`postFeed_${lang}`, collection => {
-            return collection.getFilteredByGlob(`./src/collections/posts/${lang}/*.md`).filter(livePosts)
-                .reverse()
-                .slice(0, siteConfig.maxPostsInFeed);
-        });
-    });
 
     // Plugins
     config.addPlugin(fluidPlugin);
     config.addPlugin(navigationPlugin);
-    config.addPlugin(rssPlugin);
     config.addPlugin(syntaxHighlightPlugin);
     config.addPlugin(i18n, {
         localesDirectory: "src/locales"
