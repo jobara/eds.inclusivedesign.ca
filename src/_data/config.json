@@ -1,18 +1,18 @@
 {
-  "defaultLanguage": "en-CA",
-  "languages": {
-    "en-CA": {
-      "slug": "en",
-      "uioSlug": "en_CA",
-      "dir": "ltr",
-      "name": "English"
+    "defaultLanguage": "en-CA",
+    "languages": {
+        "en-CA": {
+        "slug": "en",
+        "uioSlug": "en_CA",
+        "dir": "ltr",
+        "name": "English"
+        },
+        "fr-CA": {
+        "slug": "fr",
+        "uioSlug": "fr",
+        "dir": "ltr",
+        "name": "Français"
+        }
     },
-    "fr-CA": {
-      "slug": "fr",
-      "uioSlug": "fr",
-      "dir": "ltr",
-      "name": "Français"
-    }
-  },
-  "url": "https://eds.inclusivedesign.ca"
+    "url": "https://eds.inclusivedesign.ca"
 }

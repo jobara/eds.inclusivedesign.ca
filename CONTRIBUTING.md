@@ -229,4 +229,3 @@ To update the `.po` and `.mo` files perform the following steps:
 5. To remove old strings go to: `Translations > Purge Deleted Translations`.
 6. Save.
 7. Make sure to commit the updates `.po` and `.mo` files to the working repository.
-

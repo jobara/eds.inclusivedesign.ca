@@ -1,12 +1,35 @@
 {
+    "sources": {
+        "js": [
+            "./*.js",
+            "./src/**/*.js"
+        ],
+        "json": [
+            "./*.json",
+            "./src/**/*.json"
+        ],
+        "md": [
+            "./*.md",
+            "./src/**/*.md"
+        ],
+        "scss": [
+            "./src/assets/styles/**/*.scss"
+        ],
+        "yaml": [
+            "./*.yml",
+            "./.github/**/*.yml"
+        ]
+    },
     "eslint": {
         "js": {
-            "includes": ["./.eleventy.js"]
+            "excludes": ["./src/locales"]
         }
     },
     "lintspaces": {
-        "jsonindentation": {
-            "excludes": ["./src/_data/*.json"]
+        "newlines": {
+            "excludes": [
+                "./src/locales"
+            ]
         }
     },
     "markdownlint": {
